@@ -1,228 +1,209 @@
 import React from "react";
 import "./Footer.css";
+
 function Footer() {
   return (
-    <>
-      <div id="footer">
-        <div id="footer-wrapper">
-          {/* <div id="footer-img">
-        <a href="/index.html"><img src="/images/ethiopia.jpg" style="width: 100px;" alt=""></a>
-      </div> */}
-          <div>
-            <h5>AboutEthiopia</h5>
-            <ul className="footerList">
+    <div id="footer" className="bg-brown text-light py-4 container-fluid">
+      <div id="footer-wrapper" className="container">
+        <div className="row">
+          <div className="col-md-3">
+            <h5>About Ethiopia</h5>
+            <ul className="list-unstyled">
               <li>
-                <a className="dropdown-item" href="/pages/Facts.html">
+                <a
+                  className="dropdown-item text-light"
+                  href="/pages/Facts.html"
+                >
                   Facts
                 </a>
               </li>
               <li>
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item text-light" href="#">
                   History
                 </a>
               </li>
               <li>
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item text-light" href="#">
                   Culture
                 </a>
               </li>
               <li>
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item text-light" href="#">
                   Location
                 </a>
               </li>
               <li>
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item text-light" href="#">
                   Religion
                 </a>
               </li>
               <li>
-                <a className="dropdown-item" href="#">
-                  Goverment
+                <a className="dropdown-item text-light" href="#">
+                  Government
                 </a>
               </li>
             </ul>
           </div>
-          <div>
+          <div className="col-md-3">
             <h5>Destination</h5>
-            <ul className="footerList">
+            <ul className="list-unstyled">
               <li>
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item text-light" href="#">
                   Aksum
                 </a>
               </li>
               <li>
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item text-light" href="#">
                   Lalibela
                 </a>
               </li>
               <li>
-                <a className="dropdown-item" href="#">
-                  Goder
+                <a className="dropdown-item text-light" href="#">
+                  Gonder
                 </a>
               </li>
               <li>
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item text-light" href="#">
                   Gegole
                 </a>
               </li>
               <li>
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item text-light" href="#">
                   Dalon
                 </a>
               </li>
               <li>
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item text-light" href="#">
                   Tana
                 </a>
               </li>
               <li>
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item text-light" href="#">
                   Aksume-Tsion
                 </a>
               </li>
               <li>
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item text-light" href="#">
                   Hamer
                 </a>
               </li>
             </ul>
           </div>
-          <div>
-            <h5>ThingsToDo</h5>
-            <ul className="footerList">
+          <div className="col-md-3">
+            <h5>Things To Do</h5>
+            <ul className="list-unstyled">
               <li>
-                <a className="dropdown-item" href="#">
-                  Feeding Hyna
+                <a className="dropdown-item text-light" href="#">
+                  Feeding Hyena
                 </a>
               </li>
               <li>
-                <a className="dropdown-item" href="#">
-                  Dalon,to the deepes
+                <a className="dropdown-item text-light" href="#">
+                  Dalon, to the deepest
                 </a>
               </li>
               <li>
-                <a className="dropdown-item" href="#">
-                  Hiking toRas Dashin
+                <a className="dropdown-item text-light" href="#">
+                  Hiking to Ras Dashin
                 </a>
               </li>
               <li>
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item text-light" href="#">
                   Facts
                 </a>
               </li>
               <li>
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item text-light" href="#">
                   Religion
                 </a>
               </li>
               <li>
-                <a className="dropdown-item" href="#">
-                  Goverment
+                <a className="dropdown-item text-light" href="#">
+                  Government
                 </a>
               </li>
             </ul>
           </div>
-          <div>
-            <h5>BasicInfo</h5>
-            <ul className="footerList">
+          <div className="col-md-3">
+            <h5>Basic Info</h5>
+            <ul className="list-unstyled">
               <li>
-                <a className="dropdown-item" href="#">
-                  VisaProcess
+                <a className="dropdown-item text-light" href="#">
+                  Visa Process
                 </a>
               </li>
               <li>
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item text-light" href="#">
                   Transportation
                 </a>
               </li>
               <li>
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item text-light" href="#">
                   Food and clothes
                 </a>
               </li>
               <li>
-                <a className="dropdown-item" href="#">
-                  Safty
+                <a className="dropdown-item text-light" href="#">
+                  Safety
                 </a>
               </li>
               <li>
-                <a className="dropdown-item" href="#">
-                  money wise
+                <a className="dropdown-item text-light" href="#">
+                  Money wise
                 </a>
               </li>
               <li>
-                <a className="dropdown-item" href="#">
-                  Accomodation
+                <a className="dropdown-item text-light" href="#">
+                  Accommodation
                 </a>
               </li>
             </ul>
           </div>
         </div>
-        <div className="footer-social-links">
-          <div className="footer-links">
-            <h6>social links</h6>
-            <ul>
-              <li>
+        <div className="row mt-4">
+          <div className="col">
+            <h6>Social Links</h6>
+            <ul className="list-inline">
+              <li className="list-inline-item">
                 <a href="#">
-                  <span>
-                    <i className="fa-brands fa-facebook"></i>
-                  </span>
-                  Facebook
+                  <i className="fa-brands fa-facebook"></i> Facebook
                 </a>
               </li>
-              <li>
+              <li className="list-inline-item">
                 <a href="#">
-                  <span>
-                    <i className="fa-brands fa-x-twitter"></i>
-                  </span>
-                  X
+                  <i className="fa-brands fa-x-twitter"></i> X
                 </a>
               </li>
-              <li>
+              <li className="list-inline-item">
                 <a href="#">
-                  <span>
-                    <i className="fa-brands fa-youtube"></i>
-                  </span>
-                  youtube
+                  <i className="fa-brands fa-youtube"></i> YouTube
                 </a>
               </li>
-              <li>
+              <li className="list-inline-item">
                 <a href="#">
-                  <span>
-                    <i className="fa-brands fa-instagram"></i>
-                  </span>
-                  instagram
+                  <i className="fa-brands fa-instagram"></i> Instagram
                 </a>
               </li>
-              <li>
+              <li className="list-inline-item">
                 <a href="#">
-                  <span>
-                    <i className="fa-brands fa-tiktok"></i>
-                  </span>
-                  Tiktok
+                  <i className="fa-brands fa-tiktok"></i> TikTok
                 </a>
               </li>
-              <li>
+              <li className="list-inline-item">
                 <a href="#">
-                  <span>
-                    <i className="fa-brands fa-telegram"></i>
-                  </span>
-                  telegeram
+                  <i className="fa-brands fa-telegram"></i> Telegram
                 </a>
               </li>
             </ul>
           </div>
-          <div id="copyright">
-            <li>
-              <span>
-                &copy; Right Reserved! <i>2024</i>
-              </span>
-            </li>
+        </div>
+        <div className="row mt-4">
+          <div className="col text-center">
+            <p>&copy; 2024 Right Reserved!</p>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
