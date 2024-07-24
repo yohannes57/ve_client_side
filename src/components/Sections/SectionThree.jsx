@@ -2,6 +2,7 @@ import React from "react";
 import "./SectionThree.css";
 import Props_for_three from "./Props_for_three";
 
+//---------------------------
 const imageUrl =
   "https://cdn.getyourguide.com/img/location/5a1d399eb5dfc.jpeg/86.webp";
 const two =
@@ -9,6 +10,7 @@ const two =
 const three =
   "https://cdn.getyourguide.com/img/location/1981_25588.jpg/86.webp";
 
+//---------------------------
 function SectionThree() {
   return (
     <div className="section-three">

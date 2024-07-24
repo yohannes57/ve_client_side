@@ -1,0 +1,109 @@
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+// import "bootstrap/dist/css/bootstrap.min.css";
+// import "./Signup.css";
+
+const SignUp = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    password: "",
+    password2: "",
+  });
+  const nav = useNavigate();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    // try {
+    //   if (formData.password !== formData.password2) {
+    //     throw "password not match";
+    //   } else {
+    //     // await signUp(formData);
+    //     nav("/dashboard");
+    //   }
+    // } catch (err) {
+    //   console.error(err);
+    // }
+  };
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleClick = () => {
+    // setNewUser(false);
+    nav("/login");
+  };
+
+  return (
+    <div className="container mt-5">
+      <div className="row justify-content-center">
+        <div className="col-md-6">
+          <div className="card">
+            <div className="card-body">
+              <h2 className="card-title text-center">Sign Up</h2>
+              <form onSubmit={handleSubmit} autoComplete="off">
+                <div className="mb-3">
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="name1"
+                    name="name"
+                    placeholder="First and Last Name"
+                    onChange={handleChange}
+                  />
+                </div>
+                <div className="mb-3">
+                  <input
+                    type="email"
+                    className="form-control"
+                    id="email1"
+                    name="email"
+                    placeholder="Email"
+                    onChange={handleChange}
+                  />
+                </div>
+                <div className="mb-3">
+                  <input
+                    type="password"
+                    className="form-control"
+                    id="password1"
+                    name="password"
+                    placeholder="Password"
+                    minLength="6"
+                    onChange={handleChange}
+                  />
+                </div>
+                <div className="mb-3">
+                  <input
+                    type="password"
+                    className="form-control"
+                    id="password2"
+                    name="password2"
+                    placeholder="Confirm Password"
+                    minLength="6"
+                    onChange={handleChange}
+                  />
+                </div>
+                <button type="submit" className="btn btn-primary w-100">
+                  Sign Up
+                </button>
+              </form>
+              <p className="mt-3 text-center">
+                Already have an account?{" "}
+                <button onClick={handleClick} className="btn btn-link">
+                  Sign In
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default SignUp;

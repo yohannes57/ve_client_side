@@ -1,18 +1,19 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function HeaderProps({ title, items }) {
   return (
     <div>
       <li className="nav-item dropdown">
-        <a className="nav-link dropdown-toggle" href="#" role="button">
+        <Link className="nav-link dropdown-toggle" to="#" role="button">
           {title}
-        </a>
+        </Link>
         <ul className="dropdown-menu">
           <li>
             {items.map((item, index) => (
-              <a key={index} className="dropdown-item" href={item.link}>
+              <Link key={index} className="dropdown-item" to={item.link}>
                 {item.name}
-              </a>
+              </Link>
             ))}
           </li>
         </ul>

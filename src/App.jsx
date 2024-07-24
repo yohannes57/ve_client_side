@@ -5,6 +5,8 @@ import Header from "./components/Header/Header";
 import Banner from "./components/BannerMap/Banner";
 import SectionOne from "./components/Sections/SectionOne";
 import SectionThree from "./components/Sections/SectionThree";
+import Routings from "./Routings";
+import StateProvider from "./pages/StateProvider/StateProvider";
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -21,11 +23,10 @@ function App() {
     // thank you
     // foooter
     */}
-      <Header />
-      <Banner />
-      <SectionOne />
-      <SectionThree />
-      <Footer />
+      <StateProvider>
+        <Header />
+        <Routings />
+      </StateProvider>
     </>
   );
 }

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Header.css";
 import HeaderProps from "./HeaderProps";
+import { Link } from "react-router-dom";
 
 const aboutEthiopiaItems = [
   { name: "Facts", link: "/pages/Facts.html" },
@@ -47,11 +48,11 @@ function Header() {
   return (
     <nav className="header align-items-center mx-auto container-fluid">
       <div className="header-nav">
-        <a className="header-nav-logo" href="#">
+        <Link to={"/"} className="header-nav-logo" href="#">
           <span className="text-green">ETH</span>
           <span className="text-yellow">IOP</span>
           <span className="text-red">IA</span>
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -71,9 +72,9 @@ function Header() {
             <HeaderProps title="ThingsToDo" items={thingsToDoItems} />
             <HeaderProps title="BasicInfo" items={basicInfoItems} />
           </ul>
-          <a className="header-nav-help btn" href="pages/register.html">
+          <Link to="/signup" className="header-nav-help btn">
             Sign-Up
-          </a>
+          </Link>
         </div>
       </div>
     </nav>
