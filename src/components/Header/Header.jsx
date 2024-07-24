@@ -45,7 +45,7 @@ function Header() {
 
   const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
   return (
-    <nav className="header container-fluid">
+    <nav className="header align-items-center mx-auto container-fluid">
       <div className="header-nav">
         <a className="header-nav-logo" href="#">
           <span className="text-green">ETH</span>

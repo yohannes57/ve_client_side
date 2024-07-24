@@ -4,6 +4,7 @@ import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Banner from "./components/BannerMap/Banner";
 import SectionOne from "./components/Sections/SectionOne";
+import SectionThree from "./components/Sections/SectionThree";
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -23,6 +24,7 @@ function App() {
       <Header />
       <Banner />
       <SectionOne />
+      <SectionThree />
       <Footer />
     </>
   );

@@ -9,7 +9,6 @@
   top: 0;
   margin-bottom: 30px;
   height: 80px;
-  width: 100%;
 }
 
 .header-nav {
@@ -116,22 +115,6 @@
   display: flex;
   align-items: center;
 }
-
-/* .form-control {
-  padding: 5px;
-  border: 1px solid #ced4da;
-  border-radius: 5px;
-  margin-right: 10px;
-} */
-
-/* .search.btn {
-  padding: 5px 10px;
-  border: 1px solid #28a745;
-  color: #28a745;
-  background-color: transparent;
-  border-radius: 5px;
-  cursor: pointer;
-} */
 
 .header-nav-help.btn {
   padding: 5px 10px;
