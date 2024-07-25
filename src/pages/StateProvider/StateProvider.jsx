@@ -14,12 +14,12 @@ export default function StateProvider({ reducer, initialValue, children }) {
       const res = await axios.post("http://localhost:3000/api/auth", formData);
       // Check if token exists in response
       if (res.data && res.data.token) {
-        setCookies("token", res.data.token, { path: "/" });
+        setCookies("token", res.data.token);
         console.log("Login successful");
       } else {
         console.log("token not found ");
       }
-      setCookies("token", res.data.token, { path: "/" });
+      setCookies("token", res.data.token);
       console.log("successfully loged in");
     } catch (err) {
       console.log("login faild ");
@@ -41,7 +41,6 @@ export default function StateProvider({ reducer, initialValue, children }) {
   };
 
   //logout function
-
   const logout = () => {
     ["token"].forEach((obj) => removeCookie(obj));
   };

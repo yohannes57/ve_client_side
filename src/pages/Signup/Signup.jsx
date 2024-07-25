@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useStateValue } from "../StateProvider/StateProvider";
 // import "./Signup.css";
 
-const SignUp = () => {
+const SignUp = ({ setNewUser }) => {
   // const [{ user }, dispatch] = useStateValue();
   const { login, signUp, logout } = useStateValue().auth;
   const [formData, setFormData] = useState({

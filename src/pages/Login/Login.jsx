@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useStateValue } from "../StateProvider/StateProvider";
 
 //--------------------------
-function Login() {
+function Login({ setNewUser }) {
   // const [isAdmin, setisAdmin] = useState(false);
   // const [password, setPassword] = useState("");
   const [formData, setFormData] = useState({
@@ -13,15 +13,14 @@ function Login() {
   });
   const { login, signUp, logout } = useStateValue().auth;
 
-  const navigate = useNavigate();
+  const nav = useNavigate();
   //-------------------------
   //handle the form
   const handleSignIn = async (e) => {
     e.preventDefault();
     try {
-      let isAdmin = await login(formData);
-      console.log(isAdmin);
-      navigate("/dashboard");
+      await login(formData);
+      nav("/dashboard");
       // else navigate("/");
     } catch (error) {
       console.log(error);
@@ -30,6 +29,10 @@ function Login() {
   //-------------------------
   const handleOnChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+  const handleClick = () => {
+    // setNewUser(false);
+    nav("/signup");
   };
   return (
     <div className="forms">
@@ -53,10 +56,8 @@ function Login() {
             Sign In
           </button>
         </form>
-        <button
-          onClick={() => navigate("/signup")}
-          className="login__registerButton"
-        >
+        {/* onClick={() => navigate("/signup")} */}
+        <button onClick={handleClick} className="login__registerButton">
           No account? Create new account
         </button>
       </div>
