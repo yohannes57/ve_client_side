@@ -4,7 +4,7 @@ import { useStateValue } from "../StateProvider/StateProvider";
 // import "./Signup.css";
 
 const SignUp = ({ setNewUser }) => {
-  // const [{ user }, dispatch] = useStateValue();
+  const [{ user }, dispatch] = useStateValue().state;
   const { login, signUp, logout } = useStateValue().auth;
   const [formData, setFormData] = useState({
     name: "",
@@ -21,6 +21,7 @@ const SignUp = ({ setNewUser }) => {
         throw "password not match";
       } else {
         await signUp(formData);
+        dispatch({ type: "set_user", user: formData.email });
         nav("/dashboard");
       }
     } catch (err) {

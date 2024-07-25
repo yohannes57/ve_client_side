@@ -2,14 +2,16 @@ import React, { useState } from "react";
 import "./Header.css";
 import HeaderProps from "./HeaderProps";
 import { Link } from "react-router-dom";
+import { useStateValue } from "../../pages/StateProvider/StateProvider";
+import SignUp from "../../pages/Signup/Signup";
 
 const aboutEthiopiaItems = [
-  { name: "Facts", link: "/pages/Facts.html" },
-  { name: "History", link: "#" },
-  { name: "Culture", link: "#" },
-  { name: "Location", link: "#" },
-  { name: "Religion", link: "#" },
-  { name: "Government", link: "#" },
+  { name: "Facts", link: "/facts" },
+  { name: "History", link: "/history" },
+  { name: "Culture", link: "/culture" },
+  { name: "Location", link: "/location" },
+  { name: "Religion", link: "/religion" },
+  { name: "Government", link: "/government" },
 ];
 
 const destinationItems = [
@@ -42,6 +44,7 @@ const basicInfoItems = [
 ];
 
 function Header() {
+  const [{ user }, dispatch] = useStateValue().state;
   const [isNavCollapsed, setIsNavCollapsed] = useState(false);
 
   const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
@@ -73,7 +76,7 @@ function Header() {
             <HeaderProps title="BasicInfo" items={basicInfoItems} />
           </ul>
           <Link to="/signup" className="header-nav-help btn">
-            Sign-Up
+            {user ? user : SignUp}
           </Link>
         </div>
       </div>
