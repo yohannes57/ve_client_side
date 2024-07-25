@@ -1,47 +1,55 @@
 import React, { useState, useEffect } from "react";
 import "./Login.css";
-// import { useHistory } from "react-router-dom";
 import { Link, useNavigate } from "react-router-dom";
-// import { useStateFromContext } from "../../stateProvider/StateProvider";
+import { useStateValue } from "../StateProvider/StateProvider";
 
 //--------------------------
 function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  //   const [{ user, cart }, dispatch] = useStateFromContext();
-  const navigate = useNavigate();
-  const signIn = (e) => {
-    e.preventDefault();
-    // dispatch({ type: "add_user", user: email });
-    navigate("/");
-  };
+  // const [isAdmin, setisAdmin] = useState(false);
+  // const [password, setPassword] = useState("");
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
+  const { login, signUp, logout } = useStateValue().auth;
 
+  const navigate = useNavigate();
+  //-------------------------
+  //handle the form
+  const handleSignIn = async (e) => {
+    e.preventDefault();
+    try {
+      let isAdmin = await login(formData);
+      console.log(isAdmin);
+      navigate("/dashboard");
+      // else navigate("/");
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  //-------------------------
+  const handleOnChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
   return (
     <div className="forms">
       <Link to="/">
         <img src="" alt="" className="login__logo" />
       </Link>
-
       <div className="login__container">
         <h1>Sign-in</h1>
-        <form>
+        <form onSubmit={handleSignIn}>
           <input
             type="text"
-            value={email}
             placeholder="type your email"
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={handleOnChange}
           />
           <input
             type="password"
-            value={password}
             placeholder="password"
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={handleOnChange}
           />
-          <button
-            type="submit"
-            onClick={signIn}
-            className="login__signInButton"
-          >
+          <button type="submit" className="login__signInButton">
             Sign In
           </button>
         </form>

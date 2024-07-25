@@ -4,8 +4,11 @@ export const initialValue = {
 };
 export default function reducer(state, action) {
   switch (state.type) {
-    case "":
-      return "";
+    case "set_user":
+      return {
+        ...state,
+        user: action.user,
+      };
     case "user":
       return "";
     default:

@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-// import "bootstrap/dist/css/bootstrap.min.css";
+import { useStateValue } from "../StateProvider/StateProvider";
 // import "./Signup.css";
 
 const SignUp = () => {
+  // const [{ user }, dispatch] = useStateValue();
+  const { login, signUp, logout } = useStateValue().auth;
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -14,16 +16,16 @@ const SignUp = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // try {
-    //   if (formData.password !== formData.password2) {
-    //     throw "password not match";
-    //   } else {
-    //     // await signUp(formData);
-    //     nav("/dashboard");
-    //   }
-    // } catch (err) {
-    //   console.error(err);
-    // }
+    try {
+      if (formData.password !== formData.password2) {
+        throw "password not match";
+      } else {
+        await signUp(formData);
+        nav("/dashboard");
+      }
+    } catch (err) {
+      console.error(err);
+    }
   };
 
   const handleChange = (e) => {
@@ -93,7 +95,7 @@ const SignUp = () => {
                 </button>
               </form>
               <p className="mt-3 text-center">
-                Already have an account?{" "}
+                Already have an account?
                 <button onClick={handleClick} className="btn btn-link">
                   Sign In
                 </button>

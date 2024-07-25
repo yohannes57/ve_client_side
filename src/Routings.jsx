@@ -7,6 +7,7 @@ import SectionThree from "./components/Sections/SectionThree";
 import SignUp from "./pages/Signup/Signup";
 import Login from "./pages/Login/Login";
 import Footer from "./components/Footer/Footer";
+import Dashboard from "./components/Dashboard/Dashboard";
 //---------------------------
 function Routings() {
   return (
@@ -24,6 +25,7 @@ function Routings() {
       />
       <Route path="/signup" element={<SignUp />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/dashboard" element={<Dashboard />} />
     </Routes>
   );
 }
