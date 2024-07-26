@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useStateValue } from "../StateProvider/StateProvider";
 
 //--------------------------
-function Login({ setNewUser }) {
+function Login() {
   // const [isAdmin, setisAdmin] = useState(false);
   // const [password, setPassword] = useState("");
   const [formData, setFormData] = useState({
@@ -12,16 +12,19 @@ function Login({ setNewUser }) {
     password: "",
   });
   const { login, signUp, logout } = useStateValue().auth;
+  const [{ user, data }, dispatch] = useStateValue().state;
 
   const nav = useNavigate();
+  // console.log(user);
   //-------------------------
   //handle the form
   const handleSignIn = async (e) => {
     e.preventDefault();
+
     try {
       await login(formData);
       nav("/dashboard");
-      // else navigate("/");
+      dispatch({ type: "set_user", user: formData.email });
     } catch (error) {
       console.log(error);
     }
@@ -44,11 +47,13 @@ function Login({ setNewUser }) {
         <form onSubmit={handleSignIn}>
           <input
             type="text"
+            name="email"
             placeholder="type your email"
             onChange={handleOnChange}
           />
           <input
             type="password"
+            name="password"
             placeholder="password"
             onChange={handleOnChange}
           />

@@ -34,8 +34,10 @@ const SignUp = ({ setNewUser }) => {
       ...formData,
       [e.target.name]: e.target.value,
     });
+    // console.log(formData.email);
   };
 
+  // console.log(formData.email);
   const handleClick = () => {
     // setNewUser(false);
     nav("/login");
@@ -91,7 +93,7 @@ const SignUp = ({ setNewUser }) => {
                     onChange={handleChange}
                   />
                 </div>
-                <button type="submit" className="btn btn-primary w-100">
+                <button type="submit" className="btn btn-primary w-50">
                   Sign Up
                 </button>
               </form>

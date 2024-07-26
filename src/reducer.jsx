@@ -1,9 +1,9 @@
 export const initialValue = {
-  user: "guest",
+  user: "Guest",
   data: [],
 };
 export default function reducer(state, action) {
-  switch (state.type) {
+  switch (action.type) {
     case "set_user":
       return {
         ...state,

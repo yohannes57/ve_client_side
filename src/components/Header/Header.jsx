@@ -44,7 +44,7 @@ const basicInfoItems = [
 ];
 
 function Header() {
-  const [{ user }, dispatch] = useStateValue().state;
+  const [{ user,data }, dispatch] = useStateValue().state;
   const [isNavCollapsed, setIsNavCollapsed] = useState(false);
 
   const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
@@ -76,7 +76,7 @@ function Header() {
             <HeaderProps title="BasicInfo" items={basicInfoItems} />
           </ul>
           <Link to="/signup" className="header-nav-help btn">
-            {user ? user : SignUp}
+            {user}
           </Link>
         </div>
       </div>
