@@ -35,9 +35,15 @@ function Dashboard() {
           <button className="btn btn-warning mx-2" onClick={handleLogout}>
             Logout
           </button>
-          <button className="btn btn-danger mx-2">Delete</button>
-          <button className="btn btn-warning mx-2">Update</button>
-          <button className="btn btn-warning mx-2">Settings</button>
+          <Link to={"/dashboard/delete"} className="btn btn-danger mx-2">
+            Delete
+          </Link>
+          <Link to={"/dashboard/update"} className="btn btn-warning mx-2">
+            Update
+          </Link>
+          <Link to={"/dashboard/settings"} className="btn btn-warning mx-2">
+            Settings
+          </Link>
         </div>
       </div>
     </div>

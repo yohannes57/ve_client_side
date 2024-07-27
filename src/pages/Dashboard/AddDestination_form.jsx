@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import { useStateValue } from "../StateProvider/StateProvider";
 
 function AddDestinationForm() {
+  const [{ user, data }, dispatch] = useStateValue().state;
+  const [destdata, setDestData] = useState([]);
   const [formData, setFormData] = useState({
     name: "",
     description: "",
@@ -34,7 +37,7 @@ function AddDestinationForm() {
         longitude: parseFloat(formData.longitude),
       },
     };
-    setFormData("");
+
     try {
       await axios.post("http://localhost:3000/api/destination", payload);
       alert("Destination added successfully");
@@ -43,7 +46,7 @@ function AddDestinationForm() {
       alert("Failed to add destination");
     }
   };
-
+  //github.com/yohannes57/ve_client_side.git
   return (
     <div className="dashboard_addform container mt-5">
       <div className="row">

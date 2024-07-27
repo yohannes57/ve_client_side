@@ -10,6 +10,10 @@ import Footer from "./components/Footer/Footer";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import ProtectedRoute from "./pages/ProtectedRoute";
 import AddDestinationForm from "./pages/Dashboard/AddDestination_form";
+import DB_data from "./pages/Dashboard/DB_data";
+import DB_facts from "./pages/Dashboard/DB_facts";
+import UpdateLinks from "./pages/Dashboard/UpdateLinks";
+import DestinationUpdate from "./pages/Dashboard/DestinationUpdate";
 
 //---------------------------
 function Routings() {
@@ -31,7 +35,15 @@ function Routings() {
       <Route element={<ProtectedRoute />}>
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/dashboard/destination" element={<AddDestinationForm />} />
+        <Route path="/dashboard/update" element={<UpdateLinks />} />
+        <Route
+          path="/destinations/update/:id"
+          element={<DestinationUpdate />}
+        />
       </Route>
+      {/* dynamically redered */}
+      <Route path="/destinations" element={<DB_data />} />
+      <Route path="/facts" element={<DB_facts />} />
     </Routes>
   );
 }

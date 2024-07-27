@@ -44,7 +44,7 @@ const basicInfoItems = [
 ];
 
 function Header() {
-  const [{ user,data }, dispatch] = useStateValue().state;
+  const [{ user, data }, dispatch] = useStateValue().state;
   const [isNavCollapsed, setIsNavCollapsed] = useState(false);
 
   const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
@@ -70,10 +70,26 @@ function Header() {
           className={`navbar-collapse ${isNavCollapsed ? "collapse" : "show"}`}
         >
           <ul className="header-nav-main">
-            <HeaderProps title="About Ethiopia" items={aboutEthiopiaItems} />
-            <HeaderProps title="Destinations" items={destinationItems} />
-            <HeaderProps title="ThingsToDo" items={thingsToDoItems} />
-            <HeaderProps title="BasicInfo" items={basicInfoItems} />
+            <HeaderProps
+              link="aboutethiopia"
+              title="About Ethiopia"
+              items={aboutEthiopiaItems}
+            />
+            <HeaderProps
+              link="destinations"
+              title="Destinations"
+              items={destinationItems}
+            />
+            <HeaderProps
+              link="thingstodo"
+              title="ThingsToDo"
+              items={thingsToDoItems}
+            />
+            <HeaderProps
+              link="basicinfo"
+              title="BasicInfo"
+              items={basicInfoItems}
+            />
           </ul>
           <Link to="/signup" className="header-nav-help btn">
             {user}
