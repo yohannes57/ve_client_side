@@ -9,6 +9,7 @@ import Login from "./pages/Login/Login";
 import Footer from "./components/Footer/Footer";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import ProtectedRoute from "./pages/ProtectedRoute";
+import AddDestinationForm from "./pages/Dashboard/AddDestination_form";
 
 //---------------------------
 function Routings() {
@@ -29,6 +30,7 @@ function Routings() {
       <Route path="/login" element={<Login />} />
       <Route element={<ProtectedRoute />}>
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/dashboard/destination" element={<AddDestinationForm />} />
       </Route>
     </Routes>
   );

@@ -8,6 +8,7 @@ const stateContext = createContext();
 export default function StateProvider({ reducer, initialValue, children }) {
   //create cookies
   const [cookies, setCookies, removeCookie] = useCookies();
+
   //login
   // const login = async (formData) => {
   //   try {
