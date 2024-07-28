@@ -17,9 +17,9 @@ function Settings() {
   function handleSubmit() {
     dispatch({
       type: "set_settings",
-      styles: { fontStyle: fontStyle, bgColor: bgColor, textColor: textColor },
+      styles: { fontStyle, bgColor, textColor },
     });
-    console.log(styles.bgColor);
+    console.log(styles);
   }
   return (
     <div className="container mt-2" style={{ margTop: "150px" }}>

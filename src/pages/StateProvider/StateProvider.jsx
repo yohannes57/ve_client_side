@@ -36,6 +36,7 @@ export default function StateProvider({ reducer, initialValue, children }) {
         data: formData,
       });
       setCookies("token", res.data.token);
+      return res;
     } catch (err) {
       console.error(err);
     }
@@ -50,6 +51,7 @@ export default function StateProvider({ reducer, initialValue, children }) {
         data: formData,
       });
       setCookies("token", res.data.token);
+      return res.data;
     } catch (err) {
       console.log(err);
     }

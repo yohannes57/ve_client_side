@@ -20,9 +20,14 @@ const SignUp = ({ setNewUser }) => {
       if (formData.password !== formData.password2) {
         throw "password not match";
       } else {
-        await signUp(formData);
-        dispatch({ type: "set_user", user: formData.email });
-        nav("/dashboard");
+        let response = await signUp(formData);
+        if (response) {
+          dispatch({ type: "set_user", user: formData.email });
+          nav("/dashboard");
+        } else {
+          nav("/");
+          alert("Something is Wrong,Try Again Please!!!");
+        }
       }
     } catch (err) {
       console.error(err);

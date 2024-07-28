@@ -22,14 +22,14 @@ function Dashboard() {
           <Link to="/dashboard/destination" className="btn btn-primary mx-2">
             Add Destination
           </Link>
+          <Link to="/dashboard/facts" className="btn btn-info mx-2">
+            Add Facts
+          </Link>
           <Link to="/dashboard/accomodation" className="btn btn-secondary mx-2">
             Add Accommodation
           </Link>
           <Link to="/dashboard/basicinfo" className="btn btn-success mx-2">
             Add Basic Info
-          </Link>
-          <Link to="/dashboard/facts" className="btn btn-info mx-2">
-            Add Facts
           </Link>
         </div>
         <div className="mb-4">

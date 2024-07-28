@@ -2,9 +2,9 @@ export const initialValue = {
   user: "Guest",
   data: [],
   styles: {
-    bgColor: null,
-    fontStyle: null,
-    textColor: null,
+    fontStyle: "Arial",
+    bgColor: "white",
+    textColor: "black",
   },
 };
 export default function reducer(state, action) {

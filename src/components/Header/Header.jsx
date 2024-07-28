@@ -93,6 +93,7 @@ function Header() {
           </ul>
           <Link to="/signup" className="header-nav-help btn">
             {user}
+            {/* {!user ? <Link to={'/signup'}>{user}</Link>:(<Link to={'/'}>Logout</Link>)} */}
           </Link>
         </div>
       </div>

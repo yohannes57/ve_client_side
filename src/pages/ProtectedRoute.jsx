@@ -7,7 +7,7 @@ const ProtectedRoute = () => {
   return cookies.token ? (
     <Outlet />
   ) : (
-    <h1>You are not Authorized to view:sorry</h1>
+    <h1 style={{ color: "red" }}>Access denied</h1>
   );
 };
 

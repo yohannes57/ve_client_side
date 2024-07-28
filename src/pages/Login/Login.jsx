@@ -15,16 +15,18 @@ function Login() {
   const [{ user, data }, dispatch] = useStateValue().state;
 
   const nav = useNavigate();
-  // console.log(user);
-  //-------------------------
   //handle the form
   const handleSignIn = async (e) => {
     e.preventDefault();
-
     try {
-      await login(formData);
-      nav("/dashboard");
-      dispatch({ type: "set_user", user: formData.email });
+      const response = await login(formData);
+      if (response) {
+        dispatch({ type: "set_user", user: formData.email });
+        nav("/dashboard");
+      } else {
+        nav("/");
+        alert("Your email or password is Incorrect");
+      }
     } catch (error) {
       console.log(error);
     }
@@ -61,9 +63,9 @@ function Login() {
             Sign In
           </button>
         </form>
-        {/* onClick={() => navigate("/signup")} */}
+        {/* if you dont have account ,create first */}
         <button onClick={handleClick} className="login__registerButton">
-          No account? Create new account
+          No account? Create a new account
         </button>
       </div>
     </div>
