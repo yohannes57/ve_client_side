@@ -2,6 +2,7 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useStateValue } from "../StateProvider/StateProvider";
 import "./Dashboard.css";
+import UpdateLinks from "./UpdateLinks";
 
 function Dashboard() {
   const { logout } = useStateValue().auth;

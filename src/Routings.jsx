@@ -14,6 +14,9 @@ import DB_data from "./pages/Dashboard/DB_data";
 import DB_facts from "./pages/Dashboard/DB_facts";
 import UpdateLinks from "./pages/Dashboard/UpdateLinks";
 import DestinationUpdate from "./pages/Dashboard/DestinationUpdate";
+import DeleteCollections from "./pages/Dashboard/DeleteCollections";
+import DeleteLinks from "./pages/Dashboard/DeleteLinks.jsx";
+import Settings from "./pages/Dashboard/Settings.jsx";
 
 //---------------------------
 function Routings() {
@@ -36,10 +39,10 @@ function Routings() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/dashboard/destination" element={<AddDestinationForm />} />
         <Route path="/dashboard/update" element={<UpdateLinks />} />
-        <Route
-          path="/destinations/update/:id"
-          element={<DestinationUpdate />}
-        />
+        <Route path="/destinations/update/" element={<DestinationUpdate />} />
+        <Route path="/dashboard/delete" element={<DeleteLinks />} />
+        <Route path="/destinations/delete" element={<DeleteCollections />} />
+        <Route path="/dashboard/settings" element={<Settings />} />
       </Route>
       {/* dynamically redered */}
       <Route path="/destinations" element={<DB_data />} />
