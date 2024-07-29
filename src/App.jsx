@@ -1,11 +1,18 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import Header from "./components/Header/Header";
 import Routings from "./Routings";
 import { useStateValue } from "./pages/StateProvider/StateProvider";
 
 function App() {
-  const [{ styles }] = useStateValue().state;
+  const [{ styles, user }, dispatch] = useStateValue().state;
+
+  useEffect(() => {
+    const storedUser = localStorage.getItem("user");
+    if (storedUser) {
+      dispatch({ type: "set_user", user: storedUser });
+    }
+  }, [dispatch]);
 
   const appStyles = {
     fontFamily: styles.fontStyle,

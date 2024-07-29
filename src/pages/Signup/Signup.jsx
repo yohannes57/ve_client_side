@@ -19,15 +19,16 @@ const SignUp = ({ setNewUser }) => {
     try {
       if (formData.password !== formData.password2) {
         throw "password not match";
+      }
+      let response = await signUp(formData);
+      if (response) {
+        let userEmail = formData.email;
+        localStorage.setItem("user", userEmail);
+        nav("/dashboard");
+        dispatch({ type: "set_user", user: userEmail });
       } else {
-        let response = await signUp(formData);
-        if (response) {
-          dispatch({ type: "set_user", user: formData.email });
-          nav("/dashboard");
-        } else {
-          nav("/");
-          alert("Something is Wrong,Try Again Please!!!");
-        }
+        nav("/");
+        alert("Something is Wrong,Try Again Please!!!");
       }
     } catch (err) {
       console.error(err);

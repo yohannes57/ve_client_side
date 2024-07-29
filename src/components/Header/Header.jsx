@@ -15,14 +15,14 @@ const aboutEthiopiaItems = [
 ];
 
 const destinationItems = [
-  { name: "Aksum", link: "#" },
-  { name: "Lalibela", link: "#" },
-  { name: "Gondar", link: "#" },
-  { name: "Gegole", link: "#" },
-  { name: "Danakil", link: "#" },
-  { name: "Lake Tana", link: "#" },
-  { name: "Aksum Tsion", link: "#" },
-  { name: "Hamer", link: "#" },
+  { name: "Aksum", link: "aksum" },
+  { name: "Lalibela", link: "lalibela" },
+  { name: "Gondar", link: "gonder" },
+  { name: "Gegole", link: "gegole" },
+  { name: "Danakil", link: "danakil" },
+  { name: "Lake Tana", link: "laketana" },
+  { name: "Aksum Tsion", link: "aksumtsion" },
+  { name: "Hamer", link: "hamer" },
 ];
 
 const thingsToDoItems = [
@@ -93,7 +93,6 @@ function Header() {
           </ul>
           <Link to="/signup" className="header-nav-help btn">
             {user}
-            {/* {!user ? <Link to={'/signup'}>{user}</Link>:(<Link to={'/'}>Logout</Link>)} */}
           </Link>
         </div>
       </div>

@@ -15,14 +15,18 @@ function Login() {
   const [{ user, data }, dispatch] = useStateValue().state;
 
   const nav = useNavigate();
+
   //handle the form
   const handleSignIn = async (e) => {
     e.preventDefault();
     try {
       const response = await login(formData);
       if (response) {
-        dispatch({ type: "set_user", user: formData.email });
+        let userEmail = formData.email;
+        localStorage.setItem("user", userEmail);
+        dispatch({ type: "set_user", user: userEmail });
         nav("/dashboard");
+        console.log(userEmail);
       } else {
         nav("/");
         alert("Your email or password is Incorrect");

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { useStateValue } from "../StateProvider/StateProvider";
 import axios from "axios";
+import { useStateValue } from "../pages/StateProvider/StateProvider";
 
 function DB_data() {
   const [{ user, data }, dispatch] = useStateValue().state;

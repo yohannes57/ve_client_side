@@ -10,13 +10,15 @@ import Footer from "./components/Footer/Footer";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import ProtectedRoute from "./pages/ProtectedRoute";
 import AddDestinationForm from "./pages/Dashboard/AddDestination_form";
-import DB_data from "./pages/Dashboard/DB_data";
-import DB_facts from "./pages/Dashboard/DB_facts";
 import UpdateLinks from "./pages/Dashboard/UpdateLinks";
 import DestinationUpdate from "./pages/Dashboard/DestinationUpdate";
 import DeleteCollections from "./pages/Dashboard/DeleteCollections";
 import DeleteLinks from "./pages/Dashboard/DeleteLinks.jsx";
 import Settings from "./pages/Dashboard/Settings.jsx";
+// dynamic page
+import DB_data from "./components/DB_data.jsx";
+import DB_facts from "./components/DB_facts.jsx";
+import Destination from "./components/Destination.jsx";
 
 //---------------------------
 function Routings() {
@@ -46,6 +48,7 @@ function Routings() {
       </Route>
       {/* dynamically redered */}
       <Route path="/destinations" element={<DB_data />} />
+      <Route path="/destinations/:destinationname" element={<Destination />} />
       <Route path="/facts" element={<DB_facts />} />
     </Routes>
   );
