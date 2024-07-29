@@ -6,22 +6,22 @@ import { useStateValue } from "../../pages/StateProvider/StateProvider";
 import SignUp from "../../pages/Signup/Signup";
 
 const aboutEthiopiaItems = [
-  { name: "Facts", link: "/facts" },
-  { name: "History", link: "/history" },
-  { name: "Culture", link: "/culture" },
-  { name: "Location", link: "/location" },
-  { name: "Religion", link: "/religion" },
-  { name: "Government", link: "/government" },
+  { name: "Facts", link: "facts" },
+  { name: "History", link: "history" },
+  { name: "Culture", link: "culture" },
+  { name: "Location", link: "location" },
+  { name: "Religion", link: "religion" },
+  { name: "Government", link: "government" },
 ];
 
 const destinationItems = [
-  { name: "Aksum", link: "aksum" },
+  { name: "Axum", link: "axum" },
   { name: "Lalibela", link: "lalibela" },
   { name: "Gondar", link: "gonder" },
   { name: "Gegole", link: "gegole" },
   { name: "Danakil", link: "danakil" },
   { name: "Lake Tana", link: "laketana" },
-  { name: "Aksum Tsion", link: "aksumtsion" },
+  { name: "AxumTsion", link: "aksumtsion" },
   { name: "Hamer", link: "hamer" },
 ];
 
@@ -74,11 +74,13 @@ function Header() {
               link="aboutethiopia"
               title="About Ethiopia"
               items={aboutEthiopiaItems}
+              name={destinationItems.link}
             />
             <HeaderProps
               link="destinations"
               title="Destinations"
               items={destinationItems}
+              name={destinationItems.link}
             />
             <HeaderProps
               link="thingstodo"

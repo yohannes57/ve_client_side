@@ -4,31 +4,30 @@ import { useParams } from "react-router-dom";
 
 function Destination() {
   const { destinationname } = useParams;
-  const [destination, setDestination] = useState();
+  const [destination, setDestination] = useState(null);
 
   useEffect(() => {
-    axios
-      .get(`http://localhost:3000/api/destination/${destinationname}`)
-      .then((response) => {
-        setDestination(response.data.destinations);
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-      });
-  }, []);
+    async function fetchDestinaiton() {
+      await axios
+        .get(`http://localhost:3000/api/destination/${destinationname}`)
+        .then((response) => {
+          setDestination(response.data.destinations);
+        })
+        .catch((error) => {
+          console.error("Error fetching data:", error);
+        });
+    }
+    fetchDestinaiton();
+  }, [destinationname]);
 
   return (
     <div className="container mt-5">
       <div className="row">
         <div className="col-6">
-          <img src="" alt="image-missed" />
+          <img src={destination.imageUrl} alt="image-missed" />
         </div>
         <div className="col-6">
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae
-            consectetur quam aperiam in? Perspiciatis, vitae at itaque inventore
-            quibusdam molestiae obcaecati esse.
-          </p>
+          <p>{destination.description}</p>
         </div>
       </div>
     </div>

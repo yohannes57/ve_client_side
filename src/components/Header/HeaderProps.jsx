@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import EachDestination from "../EachDestination";
 
-function HeaderProps({ title, items, link }) {
+function HeaderProps({ title, items, link, name }) {
   return (
     <div>
       <li className="nav-item dropdown">
@@ -14,9 +15,11 @@ function HeaderProps({ title, items, link }) {
               <Link
                 key={index}
                 className="dropdown-item"
-                to={item.name.replace(/\s+/g, "").toLowerCase()}
+                // to={item.name.replace(/\s+/g, "").toLowerCase()}
+                to={`/destinations/${item.link}`}
               >
                 {item.name}
+                {/* <EachDestination id={item._id} /> */}
               </Link>
             ))}
           </li>

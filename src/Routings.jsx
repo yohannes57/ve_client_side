@@ -17,8 +17,8 @@ import DeleteLinks from "./pages/Dashboard/DeleteLinks.jsx";
 import Settings from "./pages/Dashboard/Settings.jsx";
 // dynamic page
 import DB_data from "./components/DB_data.jsx";
-import DB_facts from "./components/DB_facts.jsx";
-import Destination from "./components/Destination.jsx";
+import DB_facts from "./components/DB_facts";
+import EachDestination from "./components/EachDestination.jsx";
 
 //---------------------------
 function Routings() {
@@ -48,8 +48,11 @@ function Routings() {
       </Route>
       {/* dynamically redered */}
       <Route path="/destinations" element={<DB_data />} />
-      <Route path="/destinations/:destinationname" element={<Destination />} />
-      <Route path="/facts" element={<DB_facts />} />
+      <Route
+        path="/destinations/:destinationname"
+        element={<EachDestination />}
+      />
+      <Route path="/destinations/facts" element={<DB_facts />} />
     </Routes>
   );
 }
