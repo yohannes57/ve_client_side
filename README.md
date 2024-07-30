@@ -38,53 +38,56 @@ The VisitEthiopia website is designed to offer detailed information about Ethiop
 - **Styling**: CSS Modules,Bootsrap,and some React Bootstarp
 - **Authentication**: Custom Auth Context
 
+![Screenshot of VisitEthiopia](./assets/sampleFront.png)
+
 ## File Structure
 
+\```
 visitE-client/
-
-- ├── src/
-  │ ├── components/
-  │ │ ├── Footer/
-  │ │ ├── Header/
-  │ │ │ ├── Header.css
-  │ │ │ ├── Header.jsx
-  │ │ │ ├── HeaderProps.jsx
-  │ │ ├── Sections/
-  │ │ │ ├── Props_for_three.jsx
-  │ │ │ ├── Props_one.jsx
-  │ │ │ ├── Props_two.jsx
-  │ │ │ ├── SectionOne.jsx
-  │ │ │ ├── SectionThree.css
-  │ │ │ ├── SectionThree.jsx
-  │ │ │ ├── DB_data.jsx
-  │ │ │ ├── DB_facts.jsx
-  │ │ │ ├── Destination.jsx
-  │ │ │ ├── EachDestination.jsx
-  │ ├── pages/
-  │ │ ├── Dashboard/
-  │ │ │ ├── AddDestination_form.jsx
-  │ │ │ ├── Dashboard.css
-  │ │ │ ├── Dashboard.jsx
-  │ │ │ ├── DeleteLinks.jsx
-  │ │ │ ├── DestinationUpdate.jsx
-  │ │ │ ├── Settings.jsx
-  │ │ │ ├── UpdateLinks.jsx
-  │ │ ├── Login/
-  │ │ │ ├── Login.css
-  │ │ │ ├── Login.jsx
-  │ │ ├── Signup/
-  │ │ │ ├── Signup.css
-  │ │ │ ├── Signup.jsx
-  │ ├── StateProvider/
-  │ │ ├── StateProvider.jsx
-  │ │ ├── Auth.jsx
-  │ │ ├── ProtectedRoute.jsx
-  │ ├── App.css
-  │ ├── App.jsx
-  │ ├── index.css
-  │ ├── main.jsx
-  │ ├── reducer.jsx
-  │ ├── Routings.jsx
+├── src/
+│ ├── components/
+│ │ ├── Footer/
+│ │ ├── Header/
+│ │ │ ├── Header.css
+│ │ │ ├── Header.jsx
+│ │ │ ├── HeaderProps.jsx
+│ │ ├── Sections/
+│ │ │ ├── Props_for_three.jsx
+│ │ │ ├── Props_one.jsx
+│ │ │ ├── Props_two.jsx
+│ │ │ ├── SectionOne.jsx
+│ │ │ ├── SectionThree.css
+│ │ │ ├── SectionThree.jsx
+│ │ │ ├── DB_data.jsx
+│ │ │ ├── DB_facts.jsx
+│ │ │ ├── Destination.jsx
+│ │ │ ├── EachDestination.jsx
+│ ├── pages/
+│ │ ├── Dashboard/
+│ │ │ ├── AddDestination_form.jsx
+│ │ │ ├── Dashboard.css
+│ │ │ ├── Dashboard.jsx
+│ │ │ ├── DeleteLinks.jsx
+│ │ │ ├── DestinationUpdate.jsx
+│ │ │ ├── Settings.jsx
+│ │ │ ├── UpdateLinks.jsx
+│ │ ├── Login/
+│ │ │ ├── Login.css
+│ │ │ ├── Login.jsx
+│ │ ├── Signup/
+│ │ │ ├── Signup.css
+│ │ │ ├── Signup.jsx
+│ ├── StateProvider/
+│ │ ├── StateProvider.jsx
+│ │ ├── Auth.jsx
+│ │ ├── ProtectedRoute.jsx
+│ ├── App.css
+│ ├── App.jsx
+│ ├── index.css
+│ ├── main.jsx
+│ ├── reducer.jsx
+│ ├── Routings.jsx
+\```
 
 ## Usage
 
@@ -125,3 +128,5 @@ visitE-client/
 - The backend for this project can be found at: [VisitEthiopia Backend](https://github.com/yohannes57/ve_server_side.git)
 
 - Make sure to set up the backend by following the instructions in its README file.
+
+![Screenshot of VisitEthiopia](./assets/withDashboard.png)
