@@ -98,6 +98,6 @@ visitE-client/
 
 ## Backend Repository
 
-The backend for this project can be found at: [VisitEthiopia Backend](https://github.com/yohannses57/ve_server_side)
+The backend for this project can be found at: [VisitEthiopia Backend](https://github.com/yohannes57/ve_server_side.git)
 
 Make sure to set up the backend by following the instructions in its README file.
