@@ -6,7 +6,7 @@ function MapContainer({ embedUrl }) {
       <iframe
         src={embedUrl}
         width="100%"
-        height="350"
+        height="550"
         style={{ border: 0 }}
         allowFullScreen=""
         loading="lazy"

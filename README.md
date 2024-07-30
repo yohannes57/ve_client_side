@@ -85,14 +85,14 @@ The VisitEthiopia website is designed to offer detailed information about Ethiop
 \```
 visitE-client/
 
-## ├── src/
+##  src/
 
-- ├── components/
-- - ├── Footer/
-- - ├── Header/
-- - - ├── Header.css
-- - - ├── Header.jsx
-- - - ├── HeaderProps.jsx
+-  components/
+- -  Footer/
+- -  Header/
+- - -  Header.css
+- - -  Header.jsx
+- - -  HeaderProps.jsx
 
 ## Article Section
 
@@ -105,51 +105,51 @@ visitE-client/
 - - -ThingsToDo
 - - -Activies
 
-## ├── Sections/
+##  Sections/
 
 Props_for_three.jsx
 
-- - - ├── Props_one.jsx
-- - - ├── Props_two.jsx
-- - - ├── SectionOne.jsx
-- - - ├── SectionThree.css
-- - - ├── SectionThree.jsx
-- - - ├── DB_data.jsx
-- - - ├── DB_facts.jsx
-- - - ├── Destination.jsx
-- - - ├── EachDestination.jsx
+- - -  Props_one.jsx
+- - -  Props_two.jsx
+- - -  SectionOne.jsx
+- - -  SectionThree.css
+- - -  SectionThree.jsx
+- - -  DB_data.jsx
+- - -  DB_facts.jsx
+- - -  Destination.jsx
+- - -  EachDestination.jsx
 
-## ├── pages/
+##  pages/
 
-- - ├── Dashboard/
-- - - ├── AddDestination_form.jsx
-- - - ├── Dashboard.css
-- - - ├── Dashboard.jsx
-- - - ├── DeleteLinks.jsx
-- - - ├── DestinationUpdate.jsx
-- - - ├── Settings.jsx
-- - - ├── UpdateLinks.jsx
+- -  Dashboard/
+- - -  AddDestination_form.jsx
+- - -  Dashboard.css
+- - -  Dashboard.jsx
+- - -  DeleteLinks.jsx
+- - -  DestinationUpdate.jsx
+- - -  Settings.jsx
+- - -  UpdateLinks.jsx
 
-## ├── Login/
+##  Login/
 
-- - - ├── Login.css
-- - - ├── Login.jsx
+- - -  Login.css
+- - -  Login.jsx
 
-## ├── Signup/
+##  Signup/
 
-- - - ├── Signup.css
-- - - ├── Signup.jsx
+- - -  Signup.css
+- - -  Signup.jsx
 
-## ├── StateProvider/
+##  StateProvider/
 
-- - ├── StateProvider.jsx
-- - ├── ProtectedRoute.jsx
-- ├── App.css
-- ├── App.jsx
-- ├── index.css
-- ├── main.jsx
-- ├── reducer.jsx
-- ├── Routings.jsx
+- -  StateProvider.jsx
+- -  ProtectedRoute.jsx
+-  App.css
+-  App.jsx
+-  index.css
+-  main.jsx
+-  reducer.jsx
+-  Routings.jsx
   \```
 
 ## End
