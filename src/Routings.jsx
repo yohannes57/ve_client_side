@@ -22,6 +22,7 @@ import EachDestination from "./components/EachDestination.jsx";
 import MainArticles from "./components/ArticlesSection/MainArticles.jsx";
 import ArticleSection from "./components/ArticlesSection/ArticleSection.jsx";
 import ThingsToDo from "./components/ThingsToDo/ThingsToDo.jsx";
+import NotFound from "./components/NotFound.jsx";
 
 //---------------------------
 function Routings() {
@@ -79,6 +80,7 @@ function Routings() {
           </>
         }
       />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 }
