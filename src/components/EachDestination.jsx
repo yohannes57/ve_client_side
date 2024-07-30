@@ -31,7 +31,7 @@ function EachDestination() {
       <div className="row mb-4">
         <div className="col-md-6 d-flex flex-column justify-content-center text-center">
           <h1>{destination.name}</h1>
-          <p>{destination.description}</p>
+          <p className="text-left p-2">{destination.description}</p>
         </div>
         <div className="col-md-6 d-flex justify-content-center align-items-center">
           <img

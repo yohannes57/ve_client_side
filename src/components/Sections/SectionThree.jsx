@@ -13,28 +13,27 @@ const three =
 //---------------------------
 function SectionThree() {
   return (
-    <div className="section-three">
-      <Props_for_three
-        imageUrl={imageUrl}
-        title="Ertale"
-        paragraph="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aperiam,
-      vero, deserunt vitae repellendus fugit debitis ea saepe corrupti dicta et
-      ratione dignissimos minus quia velit tempore cupiditate. Quos, sint."
-      />
-      <Props_for_three
-        imageUrl={two}
-        title="Ertale"
-        paragraph="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aperiam,
-      vero, deserunt vitae repellendus fugit debitis ea saepe corrupti dicta et
-      ratione dignissimos minus quia velit tempore cupiditate. Quos, sint."
-      />
-      <Props_for_three
-        imageUrl={three}
-        title="Ertale"
-        paragraph="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aperiam,
-      vero, deserunt vitae repellendus fugit debitis ea saepe corrupti dicta et
-      ratione dignissimos minus quia velit tempore cupiditate. Quos, sint."
-      />
+    <div className="container-fluid">
+      <div className="row m-3">
+        <h3>Some Destiantions</h3>
+      </div>
+      <div className="container section-three">
+        <Props_for_three
+          imageUrl={imageUrl}
+          title="gonder"
+          paragraph="ondar, located in the Amhara region of northwest Ethiopia, was once the royal capital of Ethiopia."
+        />
+        <Props_for_three
+          imageUrl={two}
+          title="lalibela"
+          paragraph="Lalibela, situated in the Amhara region of northern Ethiopia,which were carved out of solid rock in the 12th century."
+        />
+        <Props_for_three
+          imageUrl={three}
+          title="hamer"
+          paragraph="The Danakil Depression, located in the Afar region of northeastern Ethiopia, is one of the hottest and most inhospitable places on Earth"
+        />
+      </div>
     </div>
   );
 }

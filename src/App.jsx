@@ -14,6 +14,7 @@ function App() {
     }
   }, [dispatch]);
 
+  //these are css properties ,used globaly
   const appStyles = {
     fontFamily: styles.fontStyle,
     backgroundColor: styles.bgColor,

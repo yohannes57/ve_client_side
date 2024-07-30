@@ -51,7 +51,7 @@ function Header() {
   return (
     <nav className="header align-items-center mx-auto container-fluid">
       <div className="header-nav">
-        <Link to={"/"} className="header-nav-logo" href="#">
+        <Link to={"/"} className="header-nav-logo">
           <span className="text-green">ETH</span>
           <span className="text-yellow">IOP</span>
           <span className="text-red">IA</span>
@@ -67,7 +67,7 @@ function Header() {
           </span>
         </button>
         <div
-          className={`navbar-collapse ${isNavCollapsed ? "collapse" : "show"}`}
+          className={`navbar-collapse ${isNavCollapsed ? "collapse " : "show"}`}
         >
           <ul className="header-nav-main">
             <HeaderProps

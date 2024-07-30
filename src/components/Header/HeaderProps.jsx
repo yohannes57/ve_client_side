@@ -4,7 +4,7 @@ import EachDestination from "../EachDestination";
 
 function HeaderProps({ title, items, link, name }) {
   return (
-    <div>
+    <>
       <li className="nav-item dropdown">
         <Link className="nav-link dropdown-toggle" to={link} role="button">
           {title}
@@ -25,7 +25,7 @@ function HeaderProps({ title, items, link, name }) {
           </li>
         </ul>
       </li>
-    </div>
+    </>
   );
 }
 

@@ -7,7 +7,7 @@ function Props_one({ imageUrl, content }) {
         <img src={imageUrl} alt="sectionImage" className="img-fluid" />
       </div>
       <div className="col-md-6">
-        <p>{content}</p>
+        <p className="text-left p-2">{content}</p>
       </div>
     </div>
   );

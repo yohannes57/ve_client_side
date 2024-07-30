@@ -7,12 +7,12 @@
 - [Project Overview](#project-overview)
 - [Features](#features)
 - [Tech Stack](#tech-stack)
-- [File Structure](#file-structure)
 - [Setup](#setup)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [Contact](#contact)
 - [Backend Repository](#Backend-repository)
+- [File Structure](#file-structure)
 
 ## Project Overview
 
@@ -37,6 +37,48 @@ The VisitEthiopia website is designed to offer detailed information about Ethiop
 - **Authentication**: Custom Auth Context
 
 ![Screenshot of VisitEthiopia](https://i.imgur.com/qI2FkbL.png)
+
+## Usage
+
+- Navigate to the application: Open http://localhost:3000 in your browser.
+- Login/Sign Up: Use the authentication features to sign up or log in.
+- Explore Destinations: Browse the destinations via the header dropdown.
+- Admin Dashboard: Access the dashboard (for authorized users) to add, update, or delete destinations, and settings feature to change color ,bg and font of the whole page
+
+## Contributing
+
+- Contributions are welcome! Please follow these steps:
+
+- Fork the repository.
+- Create a new branch (git checkout -b feature/your-feature).
+- Commit your changes (git commit -am 'Add some feature').
+- Push to the branch (git push origin feature/your-feature).
+- Open a Pull Request.
+
+## Contact
+
+- For any questions or feedback, please contact:
+
+- Name: Yohannes M.
+- Email: ytmderes@gmail.com
+- LinkedIn: Your https://linkedin.com/in/yohannes-molla
+
+## Setup
+
+1. Clone the repository
+   ```bash
+   git clone https://github.com/yohannes57/ve_client_side.git
+   cd ve_client_side
+   ```
+   npm install
+
+## Backend Repository
+
+- The backend for this project can be found at: [VisitEthiopia Backend](https://github.com/yohannes57/ve_server_side.git)
+
+- Make sure to set up the backend by following the instructions in its README file.
+
+![Screenshot of dashboard](https://i.imgur.com/Sgjjcbf.png)
 
 ## File Structure
 
@@ -81,7 +123,9 @@ Props_for_three.jsx
 
 - - - ├── Login.css
 - - - ├── Login.jsx
-- - ├── Signup/
+
+## ├── Signup/
+
 - - - ├── Signup.css
 - - - ├── Signup.jsx
 
@@ -97,44 +141,4 @@ Props_for_three.jsx
 - ├── Routings.jsx
   \```
 
-## Usage
-
-- Navigate to the application: Open http://localhost:3000 in your browser.
-- Login/Sign Up: Use the authentication features to sign up or log in.
-- Explore Destinations: Browse the destinations via the header dropdown.
-- Admin Dashboard: Access the dashboard (for authorized users) to add, update, or delete destinations, and settings feature to change color ,bg and font of the whole page
-
-## Contributing
-
-- Contributions are welcome! Please follow these steps:
-
-- Fork the repository.
-- Create a new branch (git checkout -b feature/your-feature).
-- Commit your changes (git commit -am 'Add some feature').
-- Push to the branch (git push origin feature/your-feature).
-- Open a Pull Request.
-
-## Contact
-
-- For any questions or feedback, please contact:
-
-- Name: Yohannes M.
-- Email: ytmderes@gmail.com
-- LinkedIn: Your https://linkedin.com/in/yohannes-molla
-
-## Setup
-
-1. Clone the repository
-   ```bash
-   git clone https://github.com/yohannes57/ve_client_side.git
-   cd ve_client_side
-   ```
-   npm install
-
-## Backend Repository
-
-- The backend for this project can be found at: [VisitEthiopia Backend](https://github.com/yohannes57/ve_server_side.git)
-
-- Make sure to set up the backend by following the instructions in its README file.
-
-![Screenshot of dashboard](https://i.imgur.com/Sgjjcbf.png)
+## End

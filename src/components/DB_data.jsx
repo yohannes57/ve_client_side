@@ -21,11 +21,11 @@ function DB_data() {
   return (
     <div className="container" style={{ marginTop: "80px" }}>
       <h2 className="col-12 text-align-center">Most Faviored Destinations</h2>
-      {destdata.map((data) => (
-        <div key={data.id} className="row mb-4">
+      {destdata.map((data, index) => (
+        <div key={index} className="row mb-4">
           <div className="col-md-6 d-flex flex-column justify-content-center text-center">
             <h1>{data.name}</h1>
-            <p>{data.description}</p>
+            <p className="text-left p-1">{data.description}</p>
           </div>
           <div className="col-md-6 d-flex justify-content-center align-items-center">
             <img src={data.imageUrl} alt="image" className="img-fluid" />

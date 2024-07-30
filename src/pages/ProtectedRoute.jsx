@@ -4,6 +4,7 @@ import { useStateValue } from "./StateProvider/StateProvider";
 
 const ProtectedRoute = () => {
   const { cookies, login, signup, logout } = useStateValue().auth;
+  // an Outlet is a component that serves as a placeholder for rendering nested routes.
   return cookies.token ? (
     <Outlet />
   ) : (

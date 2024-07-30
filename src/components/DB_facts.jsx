@@ -18,15 +18,15 @@ function DB_facts() {
   return (
     <div className="container" style={{ marginTop: "80px" }}>
       <div className="col-12">
-        <h2>A Few Facts ,Make Ethiopia Unique somewhat,</h2>
+        <h3>A Few Facts ,Make Ethiopia Unique somewhat,</h3>
       </div>
       {destdata.map((data) => (
         <div key={data.id} className="row mb-4">
           <div className="col-md-6 d-flex flex-column justify-content-center text-center">
-            <h1>{data.title}</h1>
+            <h4 className="text-center">{data.title}</h4>
           </div>
           <div className="col-md-6 d-flex justify-content-center align-items-center">
-            <p>{data.content}</p>
+            <p className="text-left p-2">{data.content}</p>
           </div>
         </div>
       ))}

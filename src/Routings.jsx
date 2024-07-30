@@ -19,6 +19,8 @@ import Settings from "./pages/Dashboard/Settings.jsx";
 import DB_data from "./components/DB_data.jsx";
 import DB_facts from "./components/DB_facts";
 import EachDestination from "./components/EachDestination.jsx";
+import MainArticles from "./components/ArticlesSection/MainArticles.jsx";
+import ArticleSection from "./components/ArticlesSection/ArticleSection.jsx";
 
 //---------------------------
 function Routings() {
@@ -30,6 +32,7 @@ function Routings() {
           <>
             <Banner />
             <SeciontONe />
+            <ArticleSection />
             <SectionThree />
             <Footer />
           </>
