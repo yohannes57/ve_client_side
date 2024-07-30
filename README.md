@@ -44,15 +44,19 @@ The VisitEthiopia website is designed to offer detailed information about Ethiop
 
 \```
 visitE-client/
-├── src/
+
+## ├── src/
+
 │ ├── components/
 │ │ ├── Footer/
 │ │ ├── Header/
 │ │ │ ├── Header.css
 │ │ │ ├── Header.jsx
 │ │ │ ├── HeaderProps.jsx
-│ │ ├── Sections/
-│ │ │ ├── Props_for_three.jsx
+
+## ├── Sections/
+
+Props_for_three.jsx
 │ │ │ ├── Props_one.jsx
 │ │ │ ├── Props_two.jsx
 │ │ │ ├── SectionOne.jsx
@@ -62,7 +66,9 @@ visitE-client/
 │ │ │ ├── DB_facts.jsx
 │ │ │ ├── Destination.jsx
 │ │ │ ├── EachDestination.jsx
-│ ├── pages/
+
+## ├── pages/
+
 │ │ ├── Dashboard/
 │ │ │ ├── AddDestination_form.jsx
 │ │ │ ├── Dashboard.css
@@ -71,13 +77,17 @@ visitE-client/
 │ │ │ ├── DestinationUpdate.jsx
 │ │ │ ├── Settings.jsx
 │ │ │ ├── UpdateLinks.jsx
-│ │ ├── Login/
+
+## ├── Login/
+
 │ │ │ ├── Login.css
 │ │ │ ├── Login.jsx
 │ │ ├── Signup/
 │ │ │ ├── Signup.css
 │ │ │ ├── Signup.jsx
-│ ├── StateProvider/
+
+## ├── StateProvider/
+
 │ │ ├── StateProvider.jsx
 │ │ ├── Auth.jsx
 │ │ ├── ProtectedRoute.jsx
