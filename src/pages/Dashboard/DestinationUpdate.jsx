@@ -72,7 +72,8 @@ function DestinationUpdate() {
     fetchDestination();
   }, [selectedId]);
 
-  // Handle submit
+  // Handle submit and different method used to change ,different type of data type like array,trim,split map to make
+  //to make accessable
   async function handleSubmit(e) {
     e.preventDefault();
     const payload = {

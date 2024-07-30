@@ -7,6 +7,7 @@ function Settings() {
   const [textColor, setTextColor] = useState("black");
   const [{ user, data, styles }, dispatch] = useStateValue().state;
 
+  //setting features applied for the page
   const stylesSetting = {
     fontFamily: fontStyle,
     backgroundColor: bgColor,

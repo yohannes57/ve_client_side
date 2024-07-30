@@ -61,7 +61,7 @@ function AddDestinationForm() {
             <input
               type="text"
               name="name"
-              // value={formData.name}
+              value={formData.name}
               onChange={handleChange}
               placeholder="Nameof the place: Required"
               className="form-control"
@@ -69,7 +69,7 @@ function AddDestinationForm() {
             />
             <textarea
               name="description"
-              // value={formData.description}
+              value={formData.description}
               onChange={handleChange}
               placeholder="Description Required"
               className="form-control"
@@ -78,7 +78,7 @@ function AddDestinationForm() {
             <input
               type="text"
               name="imageUrl"
-              // value={formData.imageUrl}
+              value={formData.imageUrl}
               onChange={handleChange}
               placeholder="Image URL ,required"
               className="form-control"
@@ -87,7 +87,7 @@ function AddDestinationForm() {
             <input
               type="text"
               name="highLights"
-              // value={formData.highLights}
+              value={formData.highLights}
               onChange={handleChange}
               placeholder="Highlights (comma separated),Optional"
               className="form-control"
@@ -95,7 +95,7 @@ function AddDestinationForm() {
             <input
               type="text"
               name="thingsToDo"
-              // value={formData.thingsToDo}
+              value={formData.thingsToDo}
               onChange={handleChange}
               placeholder="Things to Do (comma separated) Optional"
               className="form-control"
@@ -103,7 +103,7 @@ function AddDestinationForm() {
             <input
               type="number"
               name="latitude"
-              // value={formData.latitude}
+              value={formData.latitude}
               onChange={handleChange}
               placeholder="Latitude Optional"
               className="form-control"
@@ -112,7 +112,7 @@ function AddDestinationForm() {
             <input
               type="number"
               name="longitude"
-              // value={formData.longitude}
+              value={formData.longitude}
               onChange={handleChange}
               placeholder="Longitude Optional"
               className="form-control"

@@ -2,30 +2,14 @@ import { createContext, useContext, useReducer } from "react";
 import { useMemo } from "react";
 import { useCookies } from "react-cookie";
 import axios from "axios";
+//------------------
 //------------------create context
 const stateContext = createContext();
-//setprovider for allchildren
+//staeprovider for allchildren components
 export default function StateProvider({ reducer, initialValue, children }) {
   //create cookies
   const [cookies, setCookies, removeCookie] = useCookies();
 
-  //login
-  // const login = async (formData) => {
-  //   try {
-  //     const res = await axios.post("http://localhost:3000/api/auth", formData);
-  //     // Check if token exists in response
-  //     if (res.data && res.data.token) {
-  //       setCookies("token", res.data.token);
-  //       console.log("Login successful");
-  //     } else {
-  //       console.log("token not found ");
-  //     }
-  //     setCookies("token", res.data.token);
-  //     console.log("successfully loged in");
-  //   } catch (err) {
-  //     console.log("login faild ");
-  //   }
-  // };
   //login send the data to db
   const login = async (formData) => {
     try {
@@ -42,7 +26,7 @@ export default function StateProvider({ reducer, initialValue, children }) {
     }
   };
 
-  //signup and send the date to db
+  //signup and send the data to db
   const signUp = async (formData) => {
     try {
       const res = await axios({
@@ -61,8 +45,7 @@ export default function StateProvider({ reducer, initialValue, children }) {
   const logout = () => {
     ["token"].forEach((obj) => removeCookie(obj));
   };
-
-  //use memo memoization for avoiding rerendering or recoputing untill cookies changed
+  //use memo memoization for avoiding rerendering or recomputing untill cookies changed
   const auth_value = useMemo(
     () => ({
       cookies,
@@ -84,5 +67,5 @@ export default function StateProvider({ reducer, initialValue, children }) {
     </stateContext.Provider>
   );
 }
-//export it to use without initialize
+//export it to use without initialize at each page
 export const useStateValue = () => useContext(stateContext);

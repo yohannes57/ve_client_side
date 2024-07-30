@@ -6,6 +6,7 @@ function EachDestination() {
   const { destinationname } = useParams();
   const [destination, setDestination] = useState(null);
 
+  //access each destinations with matching its collection name
   useEffect(() => {
     async function fetchDestination() {
       try {

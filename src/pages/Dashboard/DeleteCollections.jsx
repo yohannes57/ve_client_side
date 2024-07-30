@@ -6,7 +6,7 @@ function DeleteCollections() {
   const [selectedId, setSelectedId] = useState("");
   const [destinations, setDestinations] = useState([]);
 
-  //-----useState----
+  //-----get the destination availiable from db and choose to delete
   useEffect(() => {
     async function fetchDestination() {
       try {

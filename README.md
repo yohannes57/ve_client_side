@@ -1,5 +1,3 @@
-# React + Vite
-
 # VisitEthiopia Frontend
 
 - This project is my capstone project for the Per Scholas final assessment. Welcome to the frontend repository for the VisitEthiopia website. This application aims to provide comprehensive information for travelers about various destinations in Ethiopia, making it easier to explore and plan trips to this beautiful country. Through this project, I have integrated a wide range of technologies and best practices learned during the course to create a robust and user-friendly platform.
@@ -47,57 +45,57 @@ visitE-client/
 
 ## ├── src/
 
-│ ├── components/
-│ │ ├── Footer/
-│ │ ├── Header/
-│ │ │ ├── Header.css
-│ │ │ ├── Header.jsx
-│ │ │ ├── HeaderProps.jsx
+- ├── components/
+- - ├── Footer/
+- - ├── Header/
+- - - ├── Header.css
+- - - ├── Header.jsx
+- - - ├── HeaderProps.jsx
 
 ## ├── Sections/
 
 Props_for_three.jsx
-│ │ │ ├── Props_one.jsx
-│ │ │ ├── Props_two.jsx
-│ │ │ ├── SectionOne.jsx
-│ │ │ ├── SectionThree.css
-│ │ │ ├── SectionThree.jsx
-│ │ │ ├── DB_data.jsx
-│ │ │ ├── DB_facts.jsx
-│ │ │ ├── Destination.jsx
-│ │ │ ├── EachDestination.jsx
+
+- - - ├── Props_one.jsx
+- - - ├── Props_two.jsx
+- - - ├── SectionOne.jsx
+- - - ├── SectionThree.css
+- - - ├── SectionThree.jsx
+- - - ├── DB_data.jsx
+- - - ├── DB_facts.jsx
+- - - ├── Destination.jsx
+- - - ├── EachDestination.jsx
 
 ## ├── pages/
 
-│ │ ├── Dashboard/
-│ │ │ ├── AddDestination_form.jsx
-│ │ │ ├── Dashboard.css
-│ │ │ ├── Dashboard.jsx
-│ │ │ ├── DeleteLinks.jsx
-│ │ │ ├── DestinationUpdate.jsx
-│ │ │ ├── Settings.jsx
-│ │ │ ├── UpdateLinks.jsx
+- - ├── Dashboard/
+- - - ├── AddDestination_form.jsx
+- - - ├── Dashboard.css
+- - - ├── Dashboard.jsx
+- - - ├── DeleteLinks.jsx
+- - - ├── DestinationUpdate.jsx
+- - - ├── Settings.jsx
+- - - ├── UpdateLinks.jsx
 
 ## ├── Login/
 
-│ │ │ ├── Login.css
-│ │ │ ├── Login.jsx
-│ │ ├── Signup/
-│ │ │ ├── Signup.css
-│ │ │ ├── Signup.jsx
+- - - ├── Login.css
+- - - ├── Login.jsx
+- - ├── Signup/
+- - - ├── Signup.css
+- - - ├── Signup.jsx
 
 ## ├── StateProvider/
 
-│ │ ├── StateProvider.jsx
-│ │ ├── Auth.jsx
-│ │ ├── ProtectedRoute.jsx
-│ ├── App.css
-│ ├── App.jsx
-│ ├── index.css
-│ ├── main.jsx
-│ ├── reducer.jsx
-│ ├── Routings.jsx
-\```
+- - ├── StateProvider.jsx
+- - ├── ProtectedRoute.jsx
+- ├── App.css
+- ├── App.jsx
+- ├── index.css
+- ├── main.jsx
+- ├── reducer.jsx
+- ├── Routings.jsx
+  \```
 
 ## Usage
 

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useStateValue } from "../StateProvider/StateProvider";
 // import "./Signup.css";
 
-const SignUp = ({ setNewUser }) => {
+const SignUp = () => {
   const [{ user }, dispatch] = useStateValue().state;
   const { login, signUp, logout } = useStateValue().auth;
   const [formData, setFormData] = useState({
@@ -22,6 +22,7 @@ const SignUp = ({ setNewUser }) => {
       }
       let response = await signUp(formData);
       if (response) {
+        //local storage to keep the user loged in while the page refreshing
         let userEmail = formData.email;
         localStorage.setItem("user", userEmail);
         nav("/dashboard");
@@ -45,19 +46,26 @@ const SignUp = ({ setNewUser }) => {
 
   // console.log(formData.email);
   const handleClick = () => {
-    // setNewUser(false);
     nav("/login");
   };
 
   return (
-    <div className="container mt-5">
+    <div className="container" style={{ marginTop: "85px" }}>
       <div className="row justify-content-center">
         <div className="col-md-6">
           <div className="card">
             <div className="card-body">
+              <Link to="/">
+                <img
+                  src="https://tse1.mm.bing.net/th?id=OIP.wHdxy8gVNs18QY6viBke3AAAAA&pid=Api&P=0&h=180"
+                  alt="Logo"
+                  style={{ width: "30px", height: "30px" }}
+                  className="login__logo "
+                />
+              </Link>
               <h2 className="card-title text-center">Sign Up</h2>
               <form onSubmit={handleSubmit} autoComplete="off">
-                <div className="mb-3">
+                <div className="mb-1">
                   <input
                     type="text"
                     className="form-control"
@@ -67,7 +75,7 @@ const SignUp = ({ setNewUser }) => {
                     onChange={handleChange}
                   />
                 </div>
-                <div className="mb-3">
+                <div className="mb-1">
                   <input
                     type="email"
                     className="form-control"
@@ -77,7 +85,7 @@ const SignUp = ({ setNewUser }) => {
                     onChange={handleChange}
                   />
                 </div>
-                <div className="mb-3">
+                <div className="mb-1">
                   <input
                     type="password"
                     className="form-control"
@@ -88,7 +96,7 @@ const SignUp = ({ setNewUser }) => {
                     onChange={handleChange}
                   />
                 </div>
-                <div className="mb-3">
+                <div className="mb-1">
                   <input
                     type="password"
                     className="form-control"
@@ -103,7 +111,7 @@ const SignUp = ({ setNewUser }) => {
                   Sign Up
                 </button>
               </form>
-              <p className="mt-3 text-center">
+              <p className="mt-1 text-center">
                 Already have an account?
                 <button onClick={handleClick} className="btn btn-link">
                   Sign In

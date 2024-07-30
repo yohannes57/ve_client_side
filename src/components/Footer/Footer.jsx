@@ -5,7 +5,7 @@ function Footer() {
   return (
     <div id="footer" className="  py-4 container-fluid">
       <div id="footer-wrapper" className="container">
-        <div className="row">
+        <div className="row text-align-left">
           <div className="col-md-3">
             <h5>About Ethiopia</h5>
             <ul className="list-unstyled">
@@ -157,7 +157,7 @@ function Footer() {
             </ul>
           </div>
         </div>
-        <div className="row mt-4">
+        <div className="row mt-4 text-align-left">
           <div className="col">
             <h6>Social Links</h6>
             <ul className="list-inline">

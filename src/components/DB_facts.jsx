@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 function DB_facts() {
   const [destdata, setDestData] = useState([]);
 
+  //access facts from Facts db through api provided
   useEffect(() => {
     axios
       .get("http://localhost:3000/api/facts")

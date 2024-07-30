@@ -3,9 +3,10 @@ import axios from "axios";
 import { useStateValue } from "../pages/StateProvider/StateProvider";
 
 function DB_data() {
-  const [{ user, data }, dispatch] = useStateValue().state;
+  const [{ user, data }, dispatch] = useStateValue().state; //access the state
   const [destdata, setDestData] = useState([]);
 
+  //fetch the data from teh db destinations
   useEffect(() => {
     axios
       .get("http://localhost:3000/api/destination")

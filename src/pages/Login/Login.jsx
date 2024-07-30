@@ -22,11 +22,12 @@ function Login() {
     try {
       const response = await login(formData);
       if (response) {
+        // this save the loged user to localstorage and keeps available if the page referesh
         let userEmail = formData.email;
         localStorage.setItem("user", userEmail);
         dispatch({ type: "set_user", user: userEmail });
         nav("/dashboard");
-        console.log(userEmail);
+        // console.log(userEmail);
       } else {
         nav("/");
         alert("Your email or password is Incorrect");
@@ -40,35 +41,44 @@ function Login() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
   const handleClick = () => {
-    // setNewUser(false);
     nav("/signup");
   };
   return (
-    <div className="forms">
+    <div className="container" style={{ marginTop: "100px" }}>
       <Link to="/">
-        <img src="" alt="" className="login__logo" />
+        <img
+          src="https://tse1.mm.bing.net/th?id=OIP.wHdxy8gVNs18QY6viBke3AAAAA&pid=Api&P=0&h=180"
+          alt="Logo"
+          style={{ width: "30px", height: "30px" }}
+          className="login__logo mb-1"
+        />
       </Link>
       <div className="login__container">
-        <h1>Sign-in</h1>
+        <h1 className="mb-4 text-center">Sign In</h1>
         <form onSubmit={handleSignIn}>
-          <input
-            type="text"
-            name="email"
-            placeholder="type your email"
-            onChange={handleOnChange}
-          />
-          <input
-            type="password"
-            name="password"
-            placeholder="password"
-            onChange={handleOnChange}
-          />
-          <button type="submit" className="login__signInButton">
+          <div className="mb-1">
+            <input
+              type="text"
+              name="email"
+              placeholder="Type your email"
+              className="form-control"
+              onChange={handleOnChange}
+            />
+          </div>
+          <div className="mb-2">
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              className="form-control"
+              onChange={handleOnChange}
+            />
+          </div>
+          <button type="submit" className="btn btn-primary w-40 mb-3">
             Sign In
           </button>
         </form>
-        {/* if you dont have account ,create first */}
-        <button onClick={handleClick} className="login__registerButton">
+        <button onClick={handleClick} className="btn btn-secondary w-30">
           No account? Create a new account
         </button>
       </div>
