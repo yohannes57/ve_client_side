@@ -94,6 +94,17 @@ visitE-client/
 - - - ├── Header.jsx
 - - - ├── HeaderProps.jsx
 
+## Article Section
+
+- - -ArticlesSection
+- - -MainArticles
+- - -SideArticles
+
+## ThingsToDo Sections
+
+- - -ThingsToDo
+- - -Activies
+
 ## ├── Sections/
 
 Props_for_three.jsx

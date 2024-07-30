@@ -3,8 +3,6 @@ import React from "react";
 import MainArticles from "./MainArticles";
 import SideArticls from "./SideArticls";
 import { Link } from "react-router-dom";
-// import MainArticle from './MainArticle';
-// import SidebarArticle from './SidebarArticle';
 
 const ArticleSection = () => {
   const mainArticle = {

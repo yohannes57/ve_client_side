@@ -21,6 +21,7 @@ import DB_facts from "./components/DB_facts";
 import EachDestination from "./components/EachDestination.jsx";
 import MainArticles from "./components/ArticlesSection/MainArticles.jsx";
 import ArticleSection from "./components/ArticlesSection/ArticleSection.jsx";
+import ThingsToDo from "./components/ThingsToDo/ThingsToDo.jsx";
 
 //---------------------------
 function Routings() {
@@ -33,7 +34,8 @@ function Routings() {
             <Banner />
             <SeciontONe />
             <ArticleSection />
-            <SectionThree />
+            <ThingsToDo />
+            {/* <SectionThree /> */}
             <Footer />
           </>
         }
