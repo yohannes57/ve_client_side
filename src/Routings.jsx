@@ -47,12 +47,33 @@ function Routings() {
         <Route path="/dashboard/settings" element={<Settings />} />
       </Route>
       {/* dynamically redered */}
-      <Route path="/destinations" element={<DB_data />} />
+      <Route
+        path="/destinations"
+        element={
+          <>
+            <DB_data />
+            <Footer />
+          </>
+        }
+      />
       <Route
         path="/destinations/:destinationname"
-        element={<EachDestination />}
+        element={
+          <>
+            <EachDestination />
+            <Footer />
+          </>
+        }
       />
-      <Route path="/destinations/facts" element={<DB_facts />} />
+      <Route
+        path="/destinations/facts"
+        element={
+          <>
+            <DB_facts />
+            <Footer />
+          </>
+        }
+      />
     </Routes>
   );
 }
