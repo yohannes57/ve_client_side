@@ -38,7 +38,7 @@ The VisitEthiopia website is designed to offer detailed information about Ethiop
 - **Styling**: CSS Modules,Bootsrap,and some React Bootstarp
 - **Authentication**: Custom Auth Context
 
-![Screenshot of VisitEthiopia](./assets/sampleFront.png)
+![Screenshot of VisitEthiopia](./assets/sampleFront.PNG)
 
 ## File Structure
 
@@ -129,4 +129,4 @@ visitE-client/
 
 - Make sure to set up the backend by following the instructions in its README file.
 
-![Screenshot of VisitEthiopia](./assets/withDashboard.png)
+![Screenshot of dashboard](./assets/withDashboard.PNG)
