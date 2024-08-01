@@ -49,8 +49,8 @@ function Header() {
 
   const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
   return (
-    <nav className="header align-items-center mx-auto container-fluid">
-      <div className="header-nav">
+    <nav className="header text-center mx-auto container-fluid">
+      <div className="header-nav text-center">
         <Link to={"/"} className="header-nav-logo">
           <span className="text-green">ETH</span>
           <span className="text-yellow">IOP</span>

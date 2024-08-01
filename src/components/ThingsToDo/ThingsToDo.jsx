@@ -25,6 +25,20 @@ const ThingsToDo = () => {
       description:
         "Enjoy breathtaking views and unique wildlife in the Simien Mountains.",
     },
+    {
+      imgSrc:
+        "https://cdn.getyourguide.com/img/location/5a0865f86eef6.jpeg/86.webp",
+      title: "Explore Addis Ababa",
+      description:
+        "Experience the vibrant culture and history of Ethiopia's capital city.",
+    },
+    {
+      imgSrc:
+        "https://cdn.getyourguide.com/img/location/1981_25588.jpg/86.webp",
+      title: "Hike Simien Mountains",
+      description:
+        "Enjoy breathtaking views and unique wildlife in the Simien Mountains.",
+    },
   ];
   return (
     <div className="container mt-5">
@@ -36,7 +50,7 @@ const ThingsToDo = () => {
       </div>
       <div className="row">
         {todos.map((todo, index) => (
-          <div key={index} className="col-md-4 mb-4 d-flex">
+          <div key={index} className="col-md-4 mb-2 d-flex">
             <Activities {...todo} />
           </div>
         ))}

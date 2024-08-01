@@ -1,5 +1,5 @@
 export const initialValue = {
-  user: "Guest",
+  user: "Dashboard",
   data: [],
   styles: {
     fontStyle: "Arial",

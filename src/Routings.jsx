@@ -23,6 +23,7 @@ import MainArticles from "./components/ArticlesSection/MainArticles.jsx";
 import ArticleSection from "./components/ArticlesSection/ArticleSection.jsx";
 import ThingsToDo from "./components/ThingsToDo/ThingsToDo.jsx";
 import NotFound from "./components/NotFound.jsx";
+import FeedBack from "./components/FeedBack/FeedBack.jsx";
 
 //---------------------------
 function Routings() {
@@ -36,7 +37,8 @@ function Routings() {
             <SeciontONe />
             <ArticleSection />
             <ThingsToDo />
-            {/* <SectionThree /> */}
+            <FeedBack />
+
             <Footer />
           </>
         }

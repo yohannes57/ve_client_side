@@ -3,12 +3,13 @@ import React from "react";
 import MainArticles from "./MainArticles";
 import SideArticls from "./SideArticls";
 import { Link } from "react-router-dom";
+import ReadMore from "./ReadMore";
 
 const ArticleSection = () => {
   const mainArticle = {
     title: "Quality of Life in Ethiopia: The Secrets to Know Before Visiting",
     description:
-      "Discover the unique lifestyle and rich culture in Ethiopia. Here are top tips for travelers to experience Ethiopia's quality of life, cherished by local residents.",
+      "Discover the unique lifestyle and rich culture in Ethiopia. Here are top tips for travelers to experience Ethiopia's quality of life, cherished by local residents.Discover the unique lifestyle and rich culture in Ethiopia. Here are top tips for travelers to experience Ethiopia's quality of life, cherished by local residents.",
     imgSrc:
       "https://www.youramazingplaces.com/wp-content/uploads/2014/05/Gondar-Ethiopia.jpg",
   };
@@ -37,6 +38,9 @@ const ArticleSection = () => {
       imgSrc: "https://i.ytimg.com/vi/sq_xjXk1BGo/maxresdefault.jpg",
     },
   ];
+  function handleOnclick() {
+    console.log("loading ...");
+  }
 
   return (
     <div className="container mt-5">
@@ -46,17 +50,22 @@ const ArticleSection = () => {
       </p>
       <div className="row">
         <MainArticles {...mainArticle} />
-        <div
-          className="col-md-6"
-          style={{ maxHeight: "400px", overflowY: "scroll" }}
-        >
-          {sidebarArticles.map((article, index) => (
-            <SideArticls key={index} {...article} />
-          ))}
+        <div className="col-md-4 text-right mb-5">
+          <div className="" style={{ maxHeight: "400px", overflowY: "scroll" }}>
+            {sidebarArticles.map((article, index) => (
+              <SideArticls key={index} {...article} />
+            ))}
+          </div>
+
+          <Link to={"/readmore"} className=" text-center mt-2">
+            <ReadMore readmore={"See More"} />
+          </Link>
         </div>
       </div>
-      <div className="text-right mt-2">
-        <button className="btn btn-outline-dark">See All Articles</button>
+      <div className="text-left mt-2">
+        <button onClick={handleOnclick} className="btn btn-outline-dark">
+          Read More
+        </button>
       </div>
     </div>
   );

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const SideArticls = ({ title, imgSrc }) => {
   return (
     <>
-      <div className="mb-3 md-6 d-flex">
+      <div className="mb-2 md-6 d-flex">
         <img
           src={imgSrc}
           alt={title}
@@ -13,7 +13,7 @@ const SideArticls = ({ title, imgSrc }) => {
           style={{ width: "80px", height: "80px", objectFit: "cover" }}
         />
         <div>
-          <h6 className="fw-bold">{title}</h6>
+          <h6 className="text-left ">{title}</h6>
         </div>
       </div>
     </>
