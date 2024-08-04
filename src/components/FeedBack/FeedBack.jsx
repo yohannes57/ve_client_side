@@ -18,7 +18,7 @@ function FeedBack() {
             </form>
           </div>
           <div className="col-12 col-md-6">
-            <img src="https://via.placeholder.com/300" alt="Feedback Image" />
+            <img src="https://i.imgur.com/4A5Zio7.jpeg" alt="Feedback Image" />
           </div>
         </div>
       </div>
