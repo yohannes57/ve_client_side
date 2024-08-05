@@ -24,6 +24,7 @@ import ArticleSection from "./components/ArticlesSection/ArticleSection.jsx";
 import ThingsToDo from "./components/ThingsToDo/ThingsToDo.jsx";
 import NotFound from "./components/NotFound.jsx";
 import FeedBack from "./components/FeedBack/FeedBack.jsx";
+import AboutEthiopia from "./components/AboutEthiopia.jsx";
 
 //---------------------------
 function Routings() {
@@ -74,7 +75,16 @@ function Routings() {
         }
       />
       <Route
-        path="/destinations/facts"
+        path="/aboutethiopia/:nameId"
+        element={
+          <>
+            <AboutEthiopia />
+            <Footer />
+          </>
+        }
+      />
+      <Route
+        path="/aboutethiopia/facts"
         element={
           <>
             <DB_facts />

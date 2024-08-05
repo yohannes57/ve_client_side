@@ -16,7 +16,7 @@ function HeaderProps({ title, items, link, name }) {
                 key={index}
                 className="dropdown-item"
                 // to={item.name.replace(/\s+/g, "").toLowerCase()}
-                to={`/destinations/${item.link}`}
+                to={`/${link}/${item.link}`}
               >
                 {item.name}
                 {/* <EachDestination id={item._id} /> */}
